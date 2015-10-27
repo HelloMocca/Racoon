@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RCSingleBar.h
 //  Racoon
 //
 //  Created by mocca on 2015. 10. 27..
@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TestView.h"
 
-@interface ViewController : UIViewController
+@interface RCSingleBar : UIView
 
+- (void)setData:(double)data;
 
 @end
-

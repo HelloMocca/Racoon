@@ -14,6 +14,10 @@
 		C4A96B731BDF0E4800412F9E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A96B721BDF0E4800412F9E /* Images.xcassets */; };
 		C4A96B761BDF0E4800412F9E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A96B741BDF0E4800412F9E /* LaunchScreen.xib */; };
 		C4A96B821BDF0E4800412F9E /* RacoonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B811BDF0E4800412F9E /* RacoonTests.m */; };
+		C4A96B8D1BDF0E8200412F9E /* RCSingleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B8C1BDF0E8200412F9E /* RCSingleBar.m */; };
+		C4A96B901BDF0EAD00412F9E /* RCDoughnut.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B8F1BDF0EAD00412F9E /* RCDoughnut.m */; };
+		C4A96B931BDF0F9B00412F9E /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B921BDF0F9B00412F9E /* TestView.m */; };
+		C4A96B971BDF105400412F9E /* RCLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B961BDF105400412F9E /* RCLineChart.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,15 @@
 		C4A96B7B1BDF0E4800412F9E /* RacoonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RacoonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A96B801BDF0E4800412F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4A96B811BDF0E4800412F9E /* RacoonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RacoonTests.m; sourceTree = "<group>"; };
+		C4A96B8B1BDF0E8200412F9E /* RCSingleBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSingleBar.h; sourceTree = "<group>"; };
+		C4A96B8C1BDF0E8200412F9E /* RCSingleBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSingleBar.m; sourceTree = "<group>"; };
+		C4A96B8E1BDF0EAD00412F9E /* RCDoughnut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDoughnut.h; sourceTree = "<group>"; };
+		C4A96B8F1BDF0EAD00412F9E /* RCDoughnut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDoughnut.m; sourceTree = "<group>"; };
+		C4A96B911BDF0F9B00412F9E /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
+		C4A96B921BDF0F9B00412F9E /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
+		C4A96B941BDF101400412F9E /* Racoon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Racoon.h; sourceTree = "<group>"; };
+		C4A96B951BDF105400412F9E /* RCLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLineChart.h; sourceTree = "<group>"; };
+		C4A96B961BDF105400412F9E /* RCLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLineChart.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +98,19 @@
 				C4A96B6A1BDF0E4700412F9E /* AppDelegate.m */,
 				C4A96B6C1BDF0E4700412F9E /* ViewController.h */,
 				C4A96B6D1BDF0E4700412F9E /* ViewController.m */,
+				C4A96B911BDF0F9B00412F9E /* TestView.h */,
+				C4A96B921BDF0F9B00412F9E /* TestView.m */,
 				C4A96B6F1BDF0E4800412F9E /* Main.storyboard */,
 				C4A96B721BDF0E4800412F9E /* Images.xcassets */,
 				C4A96B741BDF0E4800412F9E /* LaunchScreen.xib */,
 				C4A96B651BDF0E4700412F9E /* Supporting Files */,
+				C4A96B8B1BDF0E8200412F9E /* RCSingleBar.h */,
+				C4A96B8C1BDF0E8200412F9E /* RCSingleBar.m */,
+				C4A96B8E1BDF0EAD00412F9E /* RCDoughnut.h */,
+				C4A96B8F1BDF0EAD00412F9E /* RCDoughnut.m */,
+				C4A96B951BDF105400412F9E /* RCLineChart.h */,
+				C4A96B961BDF105400412F9E /* RCLineChart.m */,
+				C4A96B941BDF101400412F9E /* Racoon.h */,
 			);
 			path = Racoon;
 			sourceTree = "<group>";
@@ -219,8 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4A96B901BDF0EAD00412F9E /* RCDoughnut.m in Sources */,
+				C4A96B8D1BDF0E8200412F9E /* RCSingleBar.m in Sources */,
+				C4A96B971BDF105400412F9E /* RCLineChart.m in Sources */,
 				C4A96B6E1BDF0E4700412F9E /* ViewController.m in Sources */,
 				C4A96B6B1BDF0E4700412F9E /* AppDelegate.m in Sources */,
+				C4A96B931BDF0F9B00412F9E /* TestView.m in Sources */,
 				C4A96B681BDF0E4700412F9E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
