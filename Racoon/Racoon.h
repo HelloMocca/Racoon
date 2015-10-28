@@ -12,5 +12,6 @@
 #import "RCSingleBar.h"
 #import "RCDoughnut.h"
 #import "RCLineChart.h"
+#import "RCStackBar.h"
 
 #endif

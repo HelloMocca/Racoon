@@ -30,8 +30,10 @@
     [self addSubview:line];
     [line setTitle:@"Maltie Chart"];
     
-    RCSingleBar *bar = [[RCSingleBar alloc] initWithFrame:CGRectMake(0,400, [[UIScreen mainScreen]bounds].size.width, 40)];
-    [bar setData:0.65f];
+    RCStackBar *bar = [[RCStackBar alloc] initWithFrame:CGRectMake(0,400, [[UIScreen mainScreen]bounds].size.width, 40)];
+    
+    NSArray *values = [NSArray arrayWithObjects:@(0.20f),@(0.25f),@(0.35f),@(0.15f),@(0.05f),nil];
+    [bar setData:values];
     [self addSubview:bar];
 }
 

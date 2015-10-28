@@ -18,6 +18,8 @@
 		C4A96B901BDF0EAD00412F9E /* RCDoughnut.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B8F1BDF0EAD00412F9E /* RCDoughnut.m */; };
 		C4A96B931BDF0F9B00412F9E /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B921BDF0F9B00412F9E /* TestView.m */; };
 		C4A96B971BDF105400412F9E /* RCLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B961BDF105400412F9E /* RCLineChart.m */; };
+		C4A96B9A1BDF138B00412F9E /* RCStackBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B991BDF138B00412F9E /* RCStackBar.m */; };
+		C4A96B9D1BDF1B1A00412F9E /* RCBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B9C1BDF1B1A00412F9E /* RCBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		C4A96B941BDF101400412F9E /* Racoon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Racoon.h; sourceTree = "<group>"; };
 		C4A96B951BDF105400412F9E /* RCLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLineChart.h; sourceTree = "<group>"; };
 		C4A96B961BDF105400412F9E /* RCLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCLineChart.m; sourceTree = "<group>"; };
+		C4A96B981BDF138B00412F9E /* RCStackBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStackBar.h; sourceTree = "<group>"; };
+		C4A96B991BDF138B00412F9E /* RCStackBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCStackBar.m; sourceTree = "<group>"; };
+		C4A96B9B1BDF1B1A00412F9E /* RCBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBar.h; sourceTree = "<group>"; };
+		C4A96B9C1BDF1B1A00412F9E /* RCBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,10 @@
 				C4A96B651BDF0E4700412F9E /* Supporting Files */,
 				C4A96B8B1BDF0E8200412F9E /* RCSingleBar.h */,
 				C4A96B8C1BDF0E8200412F9E /* RCSingleBar.m */,
+				C4A96B9B1BDF1B1A00412F9E /* RCBar.h */,
+				C4A96B9C1BDF1B1A00412F9E /* RCBar.m */,
+				C4A96B981BDF138B00412F9E /* RCStackBar.h */,
+				C4A96B991BDF138B00412F9E /* RCStackBar.m */,
 				C4A96B8E1BDF0EAD00412F9E /* RCDoughnut.h */,
 				C4A96B8F1BDF0EAD00412F9E /* RCDoughnut.m */,
 				C4A96B951BDF105400412F9E /* RCLineChart.h */,
@@ -247,7 +257,9 @@
 				C4A96B6E1BDF0E4700412F9E /* ViewController.m in Sources */,
 				C4A96B6B1BDF0E4700412F9E /* AppDelegate.m in Sources */,
 				C4A96B931BDF0F9B00412F9E /* TestView.m in Sources */,
+				C4A96B9D1BDF1B1A00412F9E /* RCBar.m in Sources */,
 				C4A96B681BDF0E4700412F9E /* main.m in Sources */,
+				C4A96B9A1BDF138B00412F9E /* RCStackBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
