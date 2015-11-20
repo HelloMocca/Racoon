@@ -20,20 +20,24 @@
 
 - (void)drawRect:(CGRect)rect {
     RCDoughnut *donut = [[RCDoughnut alloc] init];
+    [donut setFrame:CGRectMake(150, 0, 150, 150)];
     [donut setTitle:@"donut"];
-    [donut setRatio:0.55f];
-    [donut setFrame:CGRectMake(0, 0, 200, 200)];
+    [donut setData:0.55f];
     [self addSubview:donut];
     
+    RCPolar *polar = [[RCPolar alloc] init];
+    [polar setFrame:CGRectMake(0, 0, 150, 150)];
+    NSArray *polarData = [NSArray arrayWithObjects:@(100),@(80),@(70),@(90),@(60),@(75),@(85),@(65),nil];
+    [polar setData:polarData];
+    [self addSubview:polar];
+    
     RCLineChart *line = [[RCLineChart alloc] initWithFrame:CGRectMake(0, 200, [[UIScreen mainScreen]bounds].size.width, 200)];
-    [line setTitle:@"Line Chart"];
     [self addSubview:line];
-    [line setTitle:@"Maltie Chart"];
+    [line setTitle:@"RACOON Chart"];
     
     RCStackBar *bar = [[RCStackBar alloc] initWithFrame:CGRectMake(0,400, [[UIScreen mainScreen]bounds].size.width, 40)];
-    
-    NSArray *values = [NSArray arrayWithObjects:@(0.20f),@(0.25f),@(0.35f),@(0.15f),@(0.05f),nil];
-    [bar setData:values];
+    NSArray *stackBarData = [NSArray arrayWithObjects:@(0.20f),@(0.25f),@(0.35f),@(0.15f),@(0.05f),nil];
+    [bar setData:stackBarData];
     [self addSubview:bar];
 }
 

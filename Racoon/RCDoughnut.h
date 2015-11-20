@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RCData.h"
 
 @interface RCDoughnut : UIView
 
 @property (nonatomic, readwrite) UILabel *titleLabel;
+@property (nonatomic, readwrite) CGFloat doughnutWidth;
 
-- (void)setRatio:(float)ratioValue;
+- (void)setData:(float)ratioValue;
 
 - (void)setTitle:(NSString *)title;
 

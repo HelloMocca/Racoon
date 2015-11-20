@@ -13,5 +13,6 @@
 #import "RCDoughnut.h"
 #import "RCLineChart.h"
 #import "RCStackBar.h"
+#import "RCPolar.h"
 
 #endif

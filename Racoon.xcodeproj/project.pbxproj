@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C404A61F1BFEB4EB00F8DF94 /* RCData.m in Sources */ = {isa = PBXBuildFile; fileRef = C404A61E1BFEB4EB00F8DF94 /* RCData.m */; };
 		C4A96B681BDF0E4700412F9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B671BDF0E4700412F9E /* main.m */; };
 		C4A96B6B1BDF0E4700412F9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B6A1BDF0E4700412F9E /* AppDelegate.m */; };
 		C4A96B6E1BDF0E4700412F9E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B6D1BDF0E4700412F9E /* ViewController.m */; };
@@ -20,6 +21,7 @@
 		C4A96B971BDF105400412F9E /* RCLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B961BDF105400412F9E /* RCLineChart.m */; };
 		C4A96B9A1BDF138B00412F9E /* RCStackBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B991BDF138B00412F9E /* RCStackBar.m */; };
 		C4A96B9D1BDF1B1A00412F9E /* RCBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B9C1BDF1B1A00412F9E /* RCBar.m */; };
+		C4A96BA31BE3546E00412F9E /* RCPolar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96BA21BE3546E00412F9E /* RCPolar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C404A61D1BFEB4EB00F8DF94 /* RCData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCData.h; sourceTree = "<group>"; };
+		C404A61E1BFEB4EB00F8DF94 /* RCData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCData.m; sourceTree = "<group>"; };
 		C4A96B621BDF0E4700412F9E /* Racoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Racoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4A96B661BDF0E4700412F9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4A96B671BDF0E4700412F9E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 		C4A96B991BDF138B00412F9E /* RCStackBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCStackBar.m; sourceTree = "<group>"; };
 		C4A96B9B1BDF1B1A00412F9E /* RCBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBar.h; sourceTree = "<group>"; };
 		C4A96B9C1BDF1B1A00412F9E /* RCBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCBar.m; sourceTree = "<group>"; };
+		C4A96BA11BE3546E00412F9E /* RCPolar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCPolar.h; sourceTree = "<group>"; };
+		C4A96BA21BE3546E00412F9E /* RCPolar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCPolar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C404A6201BFEB4F400F8DF94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4A96B9B1BDF1B1A00412F9E /* RCBar.h */,
+				C4A96B9C1BDF1B1A00412F9E /* RCBar.m */,
+				C404A61D1BFEB4EB00F8DF94 /* RCData.h */,
+				C404A61E1BFEB4EB00F8DF94 /* RCData.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C4A96B591BDF0E4700412F9E = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +117,7 @@
 		C4A96B641BDF0E4700412F9E /* Racoon */ = {
 			isa = PBXGroup;
 			children = (
+				C404A6201BFEB4F400F8DF94 /* Model */,
 				C4A96B691BDF0E4700412F9E /* AppDelegate.h */,
 				C4A96B6A1BDF0E4700412F9E /* AppDelegate.m */,
 				C4A96B6C1BDF0E4700412F9E /* ViewController.h */,
@@ -112,14 +130,14 @@
 				C4A96B651BDF0E4700412F9E /* Supporting Files */,
 				C4A96B8B1BDF0E8200412F9E /* RCSingleBar.h */,
 				C4A96B8C1BDF0E8200412F9E /* RCSingleBar.m */,
-				C4A96B9B1BDF1B1A00412F9E /* RCBar.h */,
-				C4A96B9C1BDF1B1A00412F9E /* RCBar.m */,
 				C4A96B981BDF138B00412F9E /* RCStackBar.h */,
 				C4A96B991BDF138B00412F9E /* RCStackBar.m */,
 				C4A96B8E1BDF0EAD00412F9E /* RCDoughnut.h */,
 				C4A96B8F1BDF0EAD00412F9E /* RCDoughnut.m */,
 				C4A96B951BDF105400412F9E /* RCLineChart.h */,
 				C4A96B961BDF105400412F9E /* RCLineChart.m */,
+				C4A96BA11BE3546E00412F9E /* RCPolar.h */,
+				C4A96BA21BE3546E00412F9E /* RCPolar.m */,
 				C4A96B941BDF101400412F9E /* Racoon.h */,
 			);
 			path = Racoon;
@@ -195,7 +213,7 @@
 		C4A96B5A1BDF0E4700412F9E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = mocca;
 				TargetAttributes = {
 					C4A96B611BDF0E4700412F9E = {
@@ -258,6 +276,8 @@
 				C4A96B6B1BDF0E4700412F9E /* AppDelegate.m in Sources */,
 				C4A96B931BDF0F9B00412F9E /* TestView.m in Sources */,
 				C4A96B9D1BDF1B1A00412F9E /* RCBar.m in Sources */,
+				C404A61F1BFEB4EB00F8DF94 /* RCData.m in Sources */,
+				C4A96BA31BE3546E00412F9E /* RCPolar.m in Sources */,
 				C4A96B681BDF0E4700412F9E /* main.m in Sources */,
 				C4A96B9A1BDF138B00412F9E /* RCStackBar.m in Sources */,
 			);
@@ -322,6 +342,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -389,6 +410,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Racoon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.next.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -399,6 +421,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Racoon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.next.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -417,6 +440,7 @@
 				);
 				INFOPLIST_FILE = RacoonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.next.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Racoon.app/Racoon";
 			};
@@ -432,6 +456,7 @@
 				);
 				INFOPLIST_FILE = RacoonTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.next.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Racoon.app/Racoon";
 			};
@@ -456,6 +481,7 @@
 				C4A96B871BDF0E4800412F9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4A96B881BDF0E4800412F9E /* Build configuration list for PBXNativeTarget "RacoonTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +490,7 @@
 				C4A96B8A1BDF0E4800412F9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
