@@ -10,7 +10,6 @@
 
 @implementation RCPolar
 {
-    CGPoint center;
     CGFloat radius;
     NSArray *colors;
     CGFloat maxValue;
@@ -24,20 +23,39 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self setColors:[NSArray arrayWithObjects:
-                            [UIColor colorWithRed:0.098f green:0.376f blue:0.678f alpha:1.00f],
-                            [UIColor colorWithRed:0.141f green:0.592f blue:0.847f alpha:1.00f],
-                            [UIColor colorWithRed:0.224f green:0.780f blue:0.933f alpha:1.00f],
-                            [UIColor colorWithRed:0.341f green:0.898f blue:0.996f alpha:1.00f],
-                            nil]];
+        [self setupDefaultSetting];
     }
     return self;
 }
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setupDefaultSetting];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupDefaultSetting];
+    }
+    return self;
+}
+
+- (void)setupDefaultSetting {
+    [self setBackgroundColor:[UIColor colorWithRed:0.114f green:0.129f blue:0.145f alpha:1.00f]];
+    [self setColors:[NSArray arrayWithObjects:
+                     [UIColor colorWithRed:0.098f green:0.376f blue:0.678f alpha:1.00f],
+                     [UIColor colorWithRed:0.141f green:0.592f blue:0.847f alpha:1.00f],
+                     [UIColor colorWithRed:0.224f green:0.780f blue:0.933f alpha:1.00f],
+                     [UIColor colorWithRed:0.341f green:0.898f blue:0.996f alpha:1.00f],
+                     nil]];
+}
+
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
-    center.x = frame.size.width/2;
-    center.y = frame.size.height/2;
     radius = (frame.size.width > frame.size.height) ? frame.size.height/2.0f : frame.size.width/2.0f;
 }
 
@@ -64,6 +82,8 @@
     CGFloat startAngle = 0;
     CGFloat angleTerm = ((M_PI * 2) / dataLength);
     CGFloat currValue;
+    CGPoint center = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
+    
     for (int i = 0; i < dataLength; i++) {
         currValue = [[dataArray objectAtIndex:i] currValue];
         

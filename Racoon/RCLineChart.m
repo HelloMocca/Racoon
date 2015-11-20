@@ -45,7 +45,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self setupSettingValues];
+        [self setupDefaultSetting];
     }
     return self;
 }
@@ -54,7 +54,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self setFrame:frame];
-        [self setupSettingValues];
+        [self setupDefaultSetting];
     }
     return self;
 }
@@ -62,12 +62,22 @@
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self setupSettingValues];
+        [self setupDefaultSetting];
     }
     return self;
 }
 
-- (void)setupSettingValues {
+- (void)setFrame:(CGRect)frame {
+    [super setFrame:frame];
+    marginTop = 40.0f;
+    marginRight = 30.0f;
+    marginLeft = 30.0f;
+    marginBottom = 30.0f;
+    graphSize.width = frame.size.width - (marginRight + marginLeft);
+    graphSize.height = frame.size.height - (marginTop + marginBottom);
+}
+
+- (void)setupDefaultSetting {
     SortType = @"ASC";
     startWithValue = NO;
     verticalAxisDisplay = NO;
@@ -75,6 +85,7 @@
     horizontalAxisDisplay = YES;
     horizontalBaseDisplay = YES;
     valueOfPointDisplay = YES;
+    [self setBackgroundColor:[UIColor colorWithRed:0.114f green:0.129f blue:0.145f alpha:1.00f]];
     [self setValues];
 }
 
@@ -158,17 +169,6 @@
     CGPoint point = CGPointMake(xPosition, yPosition);
     NSDictionary* textFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"Helvetica" size: 12], NSForegroundColorAttributeName: UIColor.whiteColor, NSParagraphStyleAttributeName: textStyle};
     [text drawAtPoint:point withAttributes:textFontAttributes];
-}
-
-
-- (void)setFrame:(CGRect)frame {
-    [super setFrame:frame];
-    marginTop = 40.0f;
-    marginRight = 30.0f;
-    marginLeft = 30.0f;
-    marginBottom = 30.0f;
-    graphSize.width = frame.size.width - (marginRight + marginLeft);
-    graphSize.height = frame.size.height - (marginTop + marginBottom);
 }
 
 - (void)setValues {

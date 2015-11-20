@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RCData.h"
 
 @interface RCSingleBar : UIView
 
-- (void)setData:(double)data;
+- (void)setData:(float)data;
 
 @end
