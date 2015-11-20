@@ -3,9 +3,9 @@
 ## How to use  
 
 ### Step 1. Init graph view with frame. 
-` RCDoughnut *donutGraph = [RCDoughnut alloc] init];  
-  [donutGraph setFrame: customeFrame];
-`
+` RCDoughnut *donutGraph = [RCDoughnut alloc] init]; ` 
+` [donutGraph setFrame: customeFrame]; `  
+
 ### Step 2. Input data using setData Interface.  
 ` [donutGraph setData:0.65f];`
 
