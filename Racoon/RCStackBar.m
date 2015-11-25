@@ -15,8 +15,6 @@
     BOOL animationEnd;
     NSTimer *animationTimer;
     
-    NSUInteger numOfBar;
-    NSArray *values;
     NSMutableArray * barRects;
     NSArray * barColors;
 }
@@ -62,17 +60,11 @@
                         nil]];
 }
 
-
-- (void)setFrame:(CGRect)frame {
-    [super setFrame:frame];
-}
-
 - (void)setData:(NSArray *)dataArray {
     animationStart = NO;
-    values = [NSArray arrayWithArray:dataArray];
-    numOfBar = [values count];
+    NSArray *values = [NSArray arrayWithArray:dataArray];
     barRects = [[NSMutableArray alloc] init];
-    for (int i = 0; i < numOfBar; i++) {
+    for (int i = 0, numOfBar = (int)[values count]; i < numOfBar; i++) {
         [barRects addObject:[[RCBar alloc]
                              initWithCurrSize:
                                 CGSizeMake((self.frame.size.width/numOfBar), self.frame.size.height)
@@ -95,7 +87,7 @@
         animationStart = YES;
         animationTimer = [NSTimer scheduledTimerWithTimeInterval:.025 target:self selector:@selector(updateValue) userInfo:nil repeats:YES];
     }
-    for (int i = 0; i < numOfBar; i++) {
+    for (int i = 0, numOfBar = (int)[barRects count]; i < numOfBar; i++) {
         RCBar *thisBar = [barRects objectAtIndex:i];
         CGContextSetFillColorWithColor(context, [thisBar color]);
         CGContextFillRect(context, [thisBar rect]);
@@ -104,7 +96,7 @@
 
 - (void)updateValue {
     animationEnd = YES;
-    for (int i = 0; i < numOfBar; i++) {
+    for (int i = 0, numOfBar = (int)[barRects count]; i < numOfBar; i++) {
         RCBar *thisBar = [barRects objectAtIndex:i];
         [thisBar updateValue];
         if (0 < i) {

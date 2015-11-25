@@ -32,8 +32,9 @@
     [self addSubview:polar];
     
     RCLineChart *line = [[RCLineChart alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(polar.frame)+10, [[UIScreen mainScreen]bounds].size.width, 200)];
+    NSArray *lineData = [NSArray arrayWithObjects:@(100),@(80),@(70),@(90),@(60),@(75),@(85),@(65),nil];
+    [line setData:lineData];
     [self addSubview:line];
-    [line setTitle:@"RACOON Chart"];
     
     RCStackBar *stackBar = [[RCStackBar alloc] initWithFrame:CGRectMake(5,CGRectGetMaxY(line.frame)+10, [[UIScreen mainScreen]bounds].size.width-10, 20)];
     NSArray *stackBarData = [NSArray arrayWithObjects:@(0.20f),@(0.25f),@(0.35f),@(0.15f),@(0.05f),nil];
@@ -44,6 +45,8 @@
     [bar setFrame:CGRectMake(5, CGRectGetMaxY(stackBar.frame)+10, [[UIScreen mainScreen] bounds].size.width - 10, 15)];
     [bar setData:0.65f];
     [self addSubview:bar];
+    
+    [self setContentSize:CGSizeMake([[UIScreen mainScreen] bounds].size.width, CGRectGetMaxY(bar.frame) + 150)];
 }
 
 @end

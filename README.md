@@ -29,7 +29,7 @@
 * Value Range: 0 ~ 1.0
 * Animation : Supported
 
-### Line Graph [NOT COMPLETED]
+### Line Graph
 * Input data type: Array of float
 * Value Range: 0 ~ 100
 * Animation : Not Supported

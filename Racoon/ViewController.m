@@ -18,7 +18,7 @@
     [super viewDidLoad];
     [[self view] setBackgroundColor:[UIColor colorWithRed:0.114f green:0.129f blue:0.145f alpha:1.00f]];
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(5, 25, [[UIScreen mainScreen] bounds].size.width - 10, 35)];
-    [titleLabel setText:@"Racoon Graph Library"];
+    [titleLabel setText:@"Racoon Chart Library"];
     [titleLabel setTextAlignment:NSTextAlignmentCenter];
     [titleLabel setFont:[UIFont fontWithName:@"Helvetica Neue" size:25]];
     [titleLabel setTextColor:[UIColor whiteColor]];

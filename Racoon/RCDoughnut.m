@@ -51,6 +51,13 @@
     return self;
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [titleLabel setFrame:CGRectMake(0, (self.frame.size.height/2)-10, self.frame.size.width, 20)];
+    [numericLabel setFrame:CGRectMake(0, (self.frame.size.height/2)+5, self.frame.size.width, 20)];
+    radius = (self.frame.size.width > self.frame.size.height) ? self.frame.size.height/2 : self.frame.size.width/2;
+}
+
 - (void)setupWithDefaultSetting {
     [self setBackgroundColor:[UIColor colorWithRed:0.114f green:0.129f blue:0.145f alpha:1.00f]];
     [self setupTitleLabel];
@@ -91,17 +98,6 @@
     if (!animationEnd) {
         [NSTimer scheduledTimerWithTimeInterval:.025 target:self selector:@selector(updateValue) userInfo:nil repeats:NO];
     }
-}
-
-- (void)setFrame:(CGRect)frame {
-    [super setFrame:frame];
-    radius = (frame.size.width > frame.size.height) ? frame.size.height/2 : frame.size.width/2;
-}
-
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    [titleLabel setFrame:CGRectMake(0, (self.frame.size.height/2)-10, self.frame.size.width, 20)];
-    [numericLabel setFrame:CGRectMake(0, (self.frame.size.height/2)+5, self.frame.size.width, 20)];
 }
 
 - (void)setupTitleLabel {

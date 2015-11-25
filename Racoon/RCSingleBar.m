@@ -17,9 +17,31 @@
 
 
 #pragma mark -Initialize methods
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self setupWithDefaultSetting];
+    }
+    return self;
+}
 
-- (void)setFrame:(CGRect)frame {
-    [super setFrame:frame];
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self setupWithDefaultSetting];
+    }
+    return self;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupWithDefaultSetting];
+    }
+    return self;
+}
+
+- (void)setupWithDefaultSetting {
     [self setBackgroundColor:[UIColor colorWithRed:0.059f green:0.184f blue:0.216f alpha:1.00f]];
 }
 

@@ -11,10 +11,12 @@
 @implementation RCLineChart
 
 {
-    UILabel        *titleLabel;
     NSArray        *values;
-    NSMutableArray *valueOfPoints;
     
+    //Style
+    UIFont   *font;
+    UIColor  *lineColor;
+    UIColor  *frameColor;
     float    maxValue;
     float    minValue;
     float    verticalTerm;
@@ -26,18 +28,15 @@
     float    marginBottom;
     float    marginLeft;
     BOOL     startWithValue;
-    BOOL     verticalAxisDisplay;
     BOOL     horizontalAxisDisplay;
-    BOOL     valueOfPointDisplay;
+    BOOL     textOfPointDisplay;
     BOOL     verticalBaseDisplay;
     BOOL     horizontalBaseDisplay;
 }
 
-@synthesize titleLabel = titleLabel;
 @synthesize startWithValue = startWithValue;
-@synthesize verticalAxisDisplay = verticalAxisDisplay;
 @synthesize horizontalAxisDisplay = horizontalAxisDisplay;
-@synthesize valueOfPointDisplay = valueOfPointDisplay;
+@synthesize textOfPointDisplay = textOfPointDisplay;
 @synthesize verticalBaseDisplay = verticalBaseDisplay;
 @synthesize horizontalBaseDisplay = horizontalBaseDisplay;
 
@@ -67,9 +66,10 @@
     return self;
 }
 
+#pragma mark -Setter methods
 - (void)setFrame:(CGRect)frame {
     [super setFrame:frame];
-    marginTop = 40.0f;
+    marginTop = 30.0f;
     marginRight = 30.0f;
     marginLeft = 30.0f;
     marginBottom = 30.0f;
@@ -80,13 +80,21 @@
 - (void)setupDefaultSetting {
     SortType = @"ASC";
     startWithValue = NO;
-    verticalAxisDisplay = NO;
     verticalBaseDisplay = NO;
     horizontalAxisDisplay = YES;
     horizontalBaseDisplay = YES;
-    valueOfPointDisplay = YES;
+    textOfPointDisplay = YES;
     [self setBackgroundColor:[UIColor colorWithRed:0.114f green:0.129f blue:0.145f alpha:1.00f]];
-    [self setValues];
+    lineColor = [UIColor colorWithRed:0.141f green:0.592f blue:0.843f alpha:1.00f];
+    frameColor = [UIColor whiteColor];
+}
+
+- (void)setData:(NSArray *)dataArray {
+    values = [dataArray copy];
+    maxValue = 100.0f;
+    minValue = 1.0f;
+    verticalTerm = 5.0f;
+    colnum = [values count];
 }
 
 #pragma mark -Draw methods
@@ -94,14 +102,13 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     [self drawGrid:context];
     [self drawLine:context];
-    [self drawValueOfPoint];
+    [self drawTextOfPoint];
 }
 
 - (void)drawGrid:(CGContextRef)context {
     CGContextSetLineWidth(context, 0.5f);
-    CGContextSetStrokeColorWithColor(context, [[UIColor whiteColor] CGColor]);
+    CGContextSetStrokeColorWithColor(context, [frameColor CGColor]);
     [self drawHorizontalAxis:context];
-    [self drawVerticalAxis:context];
     [self drawHorizontalBase];
     [self drawVerticalBase];
 }
@@ -115,10 +122,6 @@
                                                                                 (graphSize.height*(i/verticalTerm))));
     }
     CGContextStrokePath(context);
-}
-
-- (void)drawVerticalAxis:(CGContextRef)context {
-    if (!verticalAxisDisplay) return;
 }
 
 - (void)drawHorizontalBase {
@@ -140,7 +143,7 @@
 
 - (void)drawLine:(CGContextRef)context {
     CGContextSetLineWidth(context, 3.0f);
-    CGContextSetStrokeColorWithColor(context, [[UIColor colorWithRed:0.141f green:0.592f blue:0.843f alpha:1.00f] CGColor]);
+    CGContextSetStrokeColorWithColor(context, [lineColor CGColor]);
     CGContextSetLineJoin(context, kCGLineJoinRound);
     
     CGContextMoveToPoint(context, marginLeft, marginTop+graphSize.height);
@@ -153,7 +156,8 @@
     CGContextStrokePath(context);
 }
 
-- (void)drawValueOfPoint {
+- (void)drawTextOfPoint {
+    if (!textOfPointDisplay) return;
     for (int i = 0; i < colnum; i++) {
         float thisX = (graphSize.width) * ((i+1)/colnum);
         float value = [[values objectAtIndex:i] floatValue];
@@ -162,31 +166,12 @@
     }
 }
 
-- (void)drawText:(NSString *)text xPosition:(CGFloat)xPosition yPosition:(CGFloat)yPosition
-{
+- (void)drawText:(NSString *)text xPosition:(CGFloat)xPosition yPosition:(CGFloat)yPosition {
     NSMutableParagraphStyle* textStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     textStyle.alignment = NSTextAlignmentCenter;
     CGPoint point = CGPointMake(xPosition, yPosition);
     NSDictionary* textFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"Helvetica" size: 12], NSForegroundColorAttributeName: UIColor.whiteColor, NSParagraphStyleAttributeName: textStyle};
     [text drawAtPoint:point withAttributes:textFontAttributes];
-}
-
-- (void)setValues {
-    values = [NSArray arrayWithObjects:@(75.0f),@(45.0f),@(91.0f),@(55.0f),nil];
-    maxValue = 100.0f;
-    minValue = 1.0f;
-    verticalTerm = 5.0f;
-    colnum = values.count;
-}
-
-- (void)setTitle:(NSString *)title {
-    [titleLabel removeFromSuperview];
-    titleLabel = [[UILabel alloc] initWithFrame:
-                  CGRectMake(0, 10, self.frame.size.width, 20)];
-    [titleLabel setText:title];
-    [titleLabel setTextAlignment:NSTextAlignmentCenter];
-    [titleLabel setTextColor:[UIColor whiteColor]];
-    [self addSubview:titleLabel];
 }
 
 @end

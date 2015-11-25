@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Racoon.h"
 
-@interface TestView : UIView
+@interface TestView : UIScrollView
 
 @end
