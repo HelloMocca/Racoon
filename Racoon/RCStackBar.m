@@ -11,13 +11,15 @@
 @implementation RCStackBar
 
 {
-    BOOL animationStart;
-    BOOL animationEnd;
-    NSTimer *animationTimer;
     
     NSMutableArray * barRects;
+    
+    BOOL animationEnd;
+    NSTimer *animationTimer;
     NSArray * barColors;
 }
+
+@synthesize barColors = barColors;
 
 #pragma mark -Initialize methods
 - (instancetype)init {
@@ -61,7 +63,7 @@
 }
 
 - (void)setData:(NSArray *)dataArray {
-    animationStart = NO;
+    animationEnd = NO;
     NSArray *values = [NSArray arrayWithArray:dataArray];
     barRects = [[NSMutableArray alloc] init];
     for (int i = 0, numOfBar = (int)[values count]; i < numOfBar; i++) {
@@ -77,20 +79,15 @@
     }
 }
 
-- (void)setBarColors:(NSArray *)uiColorArray {
-    barColors = [NSArray arrayWithArray:uiColorArray];
-}
-
 - (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
-    if (!animationStart) {
-        animationStart = YES;
-        animationTimer = [NSTimer scheduledTimerWithTimeInterval:.025 target:self selector:@selector(updateValue) userInfo:nil repeats:YES];
-    }
     for (int i = 0, numOfBar = (int)[barRects count]; i < numOfBar; i++) {
         RCBar *thisBar = [barRects objectAtIndex:i];
         CGContextSetFillColorWithColor(context, [thisBar color]);
         CGContextFillRect(context, [thisBar rect]);
+    }
+    if (!animationEnd) {
+        animationTimer = [NSTimer scheduledTimerWithTimeInterval:.025 target:self selector:@selector(updateValue) userInfo:nil repeats:NO];
     }
 }
 
@@ -101,7 +98,7 @@
         [thisBar updateValue];
         if (0 < i) {
             RCBar *prevBar = [barRects objectAtIndex:i-1];
-            [thisBar setRectOriginX: [prevBar rectOriginX]+[prevBar currSize].width];
+            [thisBar setRectOriginX: CGRectGetMaxX(prevBar.rect)];
         }
         animationEnd = (animationEnd && [thisBar isUpdateEnd]);
     }

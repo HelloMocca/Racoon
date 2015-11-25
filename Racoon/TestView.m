@@ -19,14 +19,14 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    RCDoughnut *donut = [[RCDoughnut alloc] init];
-    [donut setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 150)];
-    [donut setTitle:@"donut"];
-    [donut setData:0.55f];
-    [self addSubview:donut];
+    RCGauge *gauge = [[RCGauge alloc] init];
+    [gauge setFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 150)];
+    [gauge setTitle:@"Gauge"];
+    [gauge setData:0.55f];
+    [self addSubview:gauge];
     
     RCPolar *polar = [[RCPolar alloc] init];
-    [polar setFrame:CGRectMake(0, CGRectGetMaxY(donut.frame)+10, [UIScreen mainScreen].bounds.size.width, 150)];
+    [polar setFrame:CGRectMake(0, CGRectGetMaxY(gauge.frame)+10, [UIScreen mainScreen].bounds.size.width, 150)];
     NSArray *polarData = [NSArray arrayWithObjects:@(100),@(80),@(70),@(90),@(60),@(75),@(85),@(65),nil];
     [polar setData:polarData];
     [self addSubview:polar];

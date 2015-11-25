@@ -1,41 +1,46 @@
-# Racoon Graph Library  
+# Racoon Chart Library  
 
 ## How to use  
 
 ### Step 1. Init graph view with frame. 
-` RCDoughnut *donutGraph = [RCDoughnut alloc] init]; `   
-` [donutGraph setFrame: customeFrame]; `  
+` RCGauge *gaugeChart = [RCGauge alloc] init]; `   
+` [gaugeChart setFrame: customeFrame]; `  
 
 ### Step 2. Input data using setData Interface.  
-` [donutGraph setData:0.65f];`
+` [gaugeChart setData:0.65f];`
 
 ### Step 3. Add Subview the graph view.
-` [view addSubView:donutGraph]; `
+` [view addSubView:gaugeChart]; `
 
 ## Graphs  
   
-### Single Bar Graph 
+### Single Bar Chart 
 * Input data type: Float
 * Value Range : 0 ~ 1.0
 * Animation : Supported 
+* wiki : [Single Bar Chart](https://github.com/HelloMocca/Racoon/wiki/SingleBar)
 
-### Stack Bar Graph
+### Stack Bar Chart
 * Input data type: Array of float
 * Values Range : 0 ~ 1.0 and Sum of values must be 1.
 * Animation : Supported
+* wiki : [Stack Bar Chart](https://github.com/HelloMocca/Racoon/wiki/StackBar)
 
-### Doughnut Graph
+### Gauge Chart
 * Input data type: Float
 * Value Range: 0 ~ 1.0
 * Animation : Supported
+* wiki : [Gauge Chart](https://github.com/HelloMocca/Racoon/wiki/Gauge)
 
-### Line Graph
+### Line Chart
 * Input data type: Array of float
 * Value Range: 0 ~ 100
 * Animation : Not Supported
 
-### Polar Graph 
+### Polar Chart 
 * Input data type: Array of float
 * Value Range: 0 ~ 100
 * Animation : Supported
+
+### Pie Chart [NOT COMPLETED]
 

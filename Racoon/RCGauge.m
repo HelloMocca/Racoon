@@ -1,31 +1,31 @@
 //
-//  RCDoughnut.m
+//  RCDoughnut.m - > RCGauge.m
 //  Racoon
 //
 //  Created by mocca on 2015. 10. 27..
 //  Copyright (c) 2015년 mocca. All rights reserved.
 //
 
-#import "RCDoughnut.h"
+#import "RCGauge.h"
 
-@implementation RCDoughnut
+@implementation RCGauge
 
 {
     RCData  *data;
     
     CGFloat radius;
     CGFloat padding;
-    CGFloat doughnutWidth;
     UILabel *titleLabel;
     UILabel *numericLabel;
     
-    UIColor *doughnutColor;
+    UIColor *gaugeColor;
+    CGFloat gaugeWidth;
     
     BOOL animationEnd;
 }
 
 @synthesize titleLabel = titleLabel;
-@synthesize doughnutWidth = doughnutWidth;
+@synthesize gaugeWidth = gaugeWidth;
 
 - (instancetype)init {
     self = [super init];
@@ -62,8 +62,8 @@
     [self setBackgroundColor:[UIColor colorWithRed:0.114f green:0.129f blue:0.145f alpha:1.00f]];
     [self setupTitleLabel];
     [self setupNumericLabel];
-    doughnutColor = [UIColor colorWithRed:0.259f green:0.698f blue:0.753f alpha:1.00f];
-    doughnutWidth = 3;
+    gaugeColor = [UIColor colorWithRed:0.259f green:0.698f blue:0.753f alpha:1.00f];
+    gaugeWidth = 3;
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -76,7 +76,7 @@
     CGContextClosePath(context);
     
     CGContextMoveToPoint(context, center.x, center.y);
-    CGContextAddArc(context, center.x, center.y, radius-doughnutWidth, -(M_PI/2), -(M_PI/2)+(M_PI*2), NO);
+    CGContextAddArc(context, center.x, center.y, radius-gaugeWidth, -(M_PI/2), -(M_PI/2)+(M_PI*2), NO);
     CGContextClosePath(context);
     
     CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:0.341f green:0.361f blue:0.376f alpha:1.00f] CGColor]);
@@ -88,9 +88,9 @@
     CGContextClosePath(context);
     
     CGContextMoveToPoint(context, center.x, center.y);
-    CGContextAddArc(context, center.x, center.y, radius-doughnutWidth, -(M_PI/2), -(M_PI/2)+(M_PI*2) * [data currValue], NO);
+    CGContextAddArc(context, center.x, center.y, radius-gaugeWidth, -(M_PI/2), -(M_PI/2)+(M_PI*2) * [data currValue], NO);
     CGContextClosePath(context);
-    CGContextSetFillColorWithColor(context, [doughnutColor CGColor]);
+    CGContextSetFillColorWithColor(context, [gaugeColor CGColor]);
     CGContextEOFillPath(context);
     
     [numericLabel setText:[NSString stringWithFormat:@"%.f%%", [data currValue]*100]];

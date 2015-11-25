@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "RCData.h"
 
-@interface RCDoughnut : UIView
+@interface RCGauge : UIView
 
 @property (nonatomic, readwrite) UILabel *titleLabel;
-@property (nonatomic, readwrite) CGFloat doughnutWidth;
+@property (nonatomic, readwrite) CGFloat gaugeWidth;
 
 - (void)setData:(float)ratioValue;
 

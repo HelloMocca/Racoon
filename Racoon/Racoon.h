@@ -10,7 +10,7 @@
 #define Racoon_Racoon_h
 
 #import "RCSingleBar.h"
-#import "RCDoughnut.h"
+#import "RCGauge.h"
 #import "RCLineChart.h"
 #import "RCStackBar.h"
 #import "RCPolar.h"

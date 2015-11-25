@@ -16,12 +16,13 @@
 		C4A96B761BDF0E4800412F9E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4A96B741BDF0E4800412F9E /* LaunchScreen.xib */; };
 		C4A96B821BDF0E4800412F9E /* RacoonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B811BDF0E4800412F9E /* RacoonTests.m */; };
 		C4A96B8D1BDF0E8200412F9E /* RCSingleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B8C1BDF0E8200412F9E /* RCSingleBar.m */; };
-		C4A96B901BDF0EAD00412F9E /* RCDoughnut.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B8F1BDF0EAD00412F9E /* RCDoughnut.m */; };
+		C4A96B901BDF0EAD00412F9E /* RCGauge.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B8F1BDF0EAD00412F9E /* RCGauge.m */; };
 		C4A96B931BDF0F9B00412F9E /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B921BDF0F9B00412F9E /* TestView.m */; };
 		C4A96B971BDF105400412F9E /* RCLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B961BDF105400412F9E /* RCLineChart.m */; };
 		C4A96B9A1BDF138B00412F9E /* RCStackBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B991BDF138B00412F9E /* RCStackBar.m */; };
 		C4A96B9D1BDF1B1A00412F9E /* RCBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B9C1BDF1B1A00412F9E /* RCBar.m */; };
 		C4A96BA31BE3546E00412F9E /* RCPolar.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96BA21BE3546E00412F9E /* RCPolar.m */; };
+		C4D6FB471C055CA400B9C8C1 /* PieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6FB461C055CA400B9C8C1 /* PieChart.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +53,8 @@
 		C4A96B811BDF0E4800412F9E /* RacoonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RacoonTests.m; sourceTree = "<group>"; };
 		C4A96B8B1BDF0E8200412F9E /* RCSingleBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCSingleBar.h; sourceTree = "<group>"; };
 		C4A96B8C1BDF0E8200412F9E /* RCSingleBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCSingleBar.m; sourceTree = "<group>"; };
-		C4A96B8E1BDF0EAD00412F9E /* RCDoughnut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDoughnut.h; sourceTree = "<group>"; };
-		C4A96B8F1BDF0EAD00412F9E /* RCDoughnut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCDoughnut.m; sourceTree = "<group>"; };
+		C4A96B8E1BDF0EAD00412F9E /* RCGauge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGauge.h; sourceTree = "<group>"; };
+		C4A96B8F1BDF0EAD00412F9E /* RCGauge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCGauge.m; sourceTree = "<group>"; };
 		C4A96B911BDF0F9B00412F9E /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		C4A96B921BDF0F9B00412F9E /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
 		C4A96B941BDF101400412F9E /* Racoon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Racoon.h; sourceTree = "<group>"; };
@@ -65,6 +66,8 @@
 		C4A96B9C1BDF1B1A00412F9E /* RCBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCBar.m; sourceTree = "<group>"; };
 		C4A96BA11BE3546E00412F9E /* RCPolar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCPolar.h; sourceTree = "<group>"; };
 		C4A96BA21BE3546E00412F9E /* RCPolar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCPolar.m; sourceTree = "<group>"; };
+		C4D6FB451C055CA400B9C8C1 /* PieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChart.h; sourceTree = "<group>"; };
+		C4D6FB461C055CA400B9C8C1 /* PieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChart.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,12 +135,14 @@
 				C4A96B8C1BDF0E8200412F9E /* RCSingleBar.m */,
 				C4A96B981BDF138B00412F9E /* RCStackBar.h */,
 				C4A96B991BDF138B00412F9E /* RCStackBar.m */,
-				C4A96B8E1BDF0EAD00412F9E /* RCDoughnut.h */,
-				C4A96B8F1BDF0EAD00412F9E /* RCDoughnut.m */,
+				C4A96B8E1BDF0EAD00412F9E /* RCGauge.h */,
+				C4A96B8F1BDF0EAD00412F9E /* RCGauge.m */,
 				C4A96B951BDF105400412F9E /* RCLineChart.h */,
 				C4A96B961BDF105400412F9E /* RCLineChart.m */,
 				C4A96BA11BE3546E00412F9E /* RCPolar.h */,
 				C4A96BA21BE3546E00412F9E /* RCPolar.m */,
+				C4D6FB451C055CA400B9C8C1 /* PieChart.h */,
+				C4D6FB461C055CA400B9C8C1 /* PieChart.m */,
 				C4A96B941BDF101400412F9E /* Racoon.h */,
 			);
 			path = Racoon;
@@ -269,11 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4A96B901BDF0EAD00412F9E /* RCDoughnut.m in Sources */,
+				C4A96B901BDF0EAD00412F9E /* RCGauge.m in Sources */,
 				C4A96B8D1BDF0E8200412F9E /* RCSingleBar.m in Sources */,
 				C4A96B971BDF105400412F9E /* RCLineChart.m in Sources */,
 				C4A96B6E1BDF0E4700412F9E /* ViewController.m in Sources */,
 				C4A96B6B1BDF0E4700412F9E /* AppDelegate.m in Sources */,
+				C4D6FB471C055CA400B9C8C1 /* PieChart.m in Sources */,
 				C4A96B931BDF0F9B00412F9E /* TestView.m in Sources */,
 				C4A96B9D1BDF1B1A00412F9E /* RCBar.m in Sources */,
 				C404A61F1BFEB4EB00F8DF94 /* RCData.m in Sources */,

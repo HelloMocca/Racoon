@@ -11,6 +11,8 @@
 
 @interface RCStackBar : UIView
 
+@property (nonatomic, strong) NSArray *barColors;
+
 - (void)setData:(NSArray *)dataArray;
 
 @end

@@ -87,6 +87,7 @@
     [self setBackgroundColor:[UIColor colorWithRed:0.114f green:0.129f blue:0.145f alpha:1.00f]];
     lineColor = [UIColor colorWithRed:0.141f green:0.592f blue:0.843f alpha:1.00f];
     frameColor = [UIColor whiteColor];
+    font = [UIFont fontWithName: @"Helvetica" size: 12];
 }
 
 - (void)setData:(NSArray *)dataArray {
@@ -170,7 +171,7 @@
     NSMutableParagraphStyle* textStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
     textStyle.alignment = NSTextAlignmentCenter;
     CGPoint point = CGPointMake(xPosition, yPosition);
-    NSDictionary* textFontAttributes = @{NSFontAttributeName: [UIFont fontWithName: @"Helvetica" size: 12], NSForegroundColorAttributeName: UIColor.whiteColor, NSParagraphStyleAttributeName: textStyle};
+    NSDictionary* textFontAttributes = @{NSFontAttributeName: font, NSForegroundColorAttributeName: UIColor.whiteColor, NSParagraphStyleAttributeName: textStyle};
     [text drawAtPoint:point withAttributes:textFontAttributes];
 }
 
