@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A4B4BB01C97FBB700109C12 /* BarChartTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B4BAF1C97FBB700109C12 /* BarChartTestView.m */; };
+		4A4B4BB31C97FC5800109C12 /* GaugeChartTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B4BB21C97FC5800109C12 /* GaugeChartTestView.m */; };
 		C404A61F1BFEB4EB00F8DF94 /* RCData.m in Sources */ = {isa = PBXBuildFile; fileRef = C404A61E1BFEB4EB00F8DF94 /* RCData.m */; };
 		C4A96B681BDF0E4700412F9E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B671BDF0E4700412F9E /* main.m */; };
 		C4A96B6B1BDF0E4700412F9E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4A96B6A1BDF0E4700412F9E /* AppDelegate.m */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A4B4BAE1C97FBB700109C12 /* BarChartTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarChartTestView.h; sourceTree = "<group>"; };
+		4A4B4BAF1C97FBB700109C12 /* BarChartTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarChartTestView.m; sourceTree = "<group>"; };
+		4A4B4BB11C97FC5800109C12 /* GaugeChartTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaugeChartTestView.h; sourceTree = "<group>"; };
+		4A4B4BB21C97FC5800109C12 /* GaugeChartTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugeChartTestView.m; sourceTree = "<group>"; };
 		C404A61D1BFEB4EB00F8DF94 /* RCData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCData.h; sourceTree = "<group>"; };
 		C404A61E1BFEB4EB00F8DF94 /* RCData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCData.m; sourceTree = "<group>"; };
 		C4A96B621BDF0E4700412F9E /* Racoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Racoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +133,10 @@
 				C4A96B6D1BDF0E4700412F9E /* ViewController.m */,
 				C4A96B911BDF0F9B00412F9E /* TestView.h */,
 				C4A96B921BDF0F9B00412F9E /* TestView.m */,
+				4A4B4BAE1C97FBB700109C12 /* BarChartTestView.h */,
+				4A4B4BAF1C97FBB700109C12 /* BarChartTestView.m */,
+				4A4B4BB11C97FC5800109C12 /* GaugeChartTestView.h */,
+				4A4B4BB21C97FC5800109C12 /* GaugeChartTestView.m */,
 				C4A96B6F1BDF0E4800412F9E /* Main.storyboard */,
 				C4A96B721BDF0E4800412F9E /* Images.xcassets */,
 				C4A96B741BDF0E4800412F9E /* LaunchScreen.xib */,
@@ -283,9 +293,11 @@
 				C4A96B931BDF0F9B00412F9E /* TestView.m in Sources */,
 				C4A96B9D1BDF1B1A00412F9E /* RCBar.m in Sources */,
 				C404A61F1BFEB4EB00F8DF94 /* RCData.m in Sources */,
+				4A4B4BB31C97FC5800109C12 /* GaugeChartTestView.m in Sources */,
 				C4A96BA31BE3546E00412F9E /* RCPolar.m in Sources */,
 				C4A96B681BDF0E4700412F9E /* main.m in Sources */,
 				C4A96B9A1BDF138B00412F9E /* RCStackBar.m in Sources */,
+				4A4B4BB01C97FBB700109C12 /* BarChartTestView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

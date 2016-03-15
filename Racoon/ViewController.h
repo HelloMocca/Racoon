@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "TestView.h"
+#import "BarChartTestView.h"
+#import "GaugeChartTestView.h"
 
 @interface ViewController : UIViewController
 

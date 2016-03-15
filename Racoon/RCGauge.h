@@ -18,7 +18,11 @@
 
 - (void)setTitle:(NSString *)title;
 
-- (void)setTitleColor:(UIColor*)color;
+- (void)setTitleColor:(UIColor *)color;
+
+- (void)setGaugeColor:(UIColor *)color;
+
+- (void)setTiming:(NSString *)timing;
 
 - (void)setTitleFont:(UIFont *)font;
 

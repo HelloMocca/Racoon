@@ -16,11 +16,12 @@
     CGFloat radius;
     CGFloat padding;
     UILabel *titleLabel;
-    UILabel *numericLabel;
+    UILabel *valueLabel;
     
     UIColor *gaugeColor;
     CGFloat gaugeWidth;
     
+    NSString *timing;
     BOOL animationEnd;
 }
 
@@ -54,16 +55,17 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     [titleLabel setFrame:CGRectMake(0, (self.frame.size.height/2)-10, self.frame.size.width, 20)];
-    [numericLabel setFrame:CGRectMake(0, (self.frame.size.height/2)+5, self.frame.size.width, 20)];
+    [valueLabel setFrame:CGRectMake(0, (self.frame.size.height/2)+5, self.frame.size.width, 20)];
     radius = (self.frame.size.width > self.frame.size.height) ? self.frame.size.height/2 : self.frame.size.width/2;
 }
 
 - (void)setupWithDefaultSetting {
     [self setBackgroundColor:[UIColor colorWithRed:0.114f green:0.129f blue:0.145f alpha:1.00f]];
     [self setupTitleLabel];
-    [self setupNumericLabel];
+    [self setupValueLabel];
     gaugeColor = [UIColor colorWithRed:0.259f green:0.698f blue:0.753f alpha:1.00f];
     gaugeWidth = 3;
+    timing = @"ease";
 }
 
 - (void)drawRect:(CGRect)rect {
@@ -93,7 +95,7 @@
     CGContextSetFillColorWithColor(context, [gaugeColor CGColor]);
     CGContextEOFillPath(context);
     
-    [numericLabel setText:[NSString stringWithFormat:@"%.f%%", [data currValue]*100]];
+    [valueLabel setText:[NSString stringWithFormat:@"%.f%%", [data currValue]*100]];
     
     if (!animationEnd) {
         [NSTimer scheduledTimerWithTimeInterval:.025 target:self selector:@selector(updateValue) userInfo:nil repeats:NO];
@@ -108,12 +110,12 @@
     [self addSubview:titleLabel];
 }
 
-- (void)setupNumericLabel {
-    numericLabel = [[UILabel alloc] init];
-    [numericLabel setTextColor:[UIColor colorWithRed:0.769f green:0.769f blue:0.780f alpha:1.00f]];
-    [numericLabel setFont:[UIFont systemFontOfSize:15]];
-    [numericLabel setTextAlignment:NSTextAlignmentCenter];
-    [self addSubview:numericLabel];
+- (void)setupValueLabel {
+    valueLabel = [[UILabel alloc] init];
+    [valueLabel setTextColor:[UIColor colorWithRed:0.769f green:0.769f blue:0.780f alpha:1.00f]];
+    [valueLabel setFont:[UIFont systemFontOfSize:15]];
+    [valueLabel setTextAlignment:NSTextAlignmentCenter];
+    [self addSubview:valueLabel];
 }
 
 - (void)setData:(float)ratioValue {
@@ -133,6 +135,18 @@
 
 - (void)setTitleFont:(UIFont *)font {
     [[self titleLabel] setFont:font];
+}
+
+- (void)setGaugeColor:(UIColor*)uiColor {
+    gaugeColor = uiColor;
+}
+
+- (void)setTiming:(NSString *)aTiming {
+    if ([aTiming isEqual: @"linear"] || [aTiming isEqual: @"ease"]) {
+        timing = aTiming;
+    } else {
+        timing = @"ease";
+    }
 }
 
 - (void)updateValue {
