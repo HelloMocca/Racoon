@@ -1,5 +1,5 @@
 # Racoon Chart Library  
-<img width="500" alt="Racoon Chart Library" src="https://cloud.githubusercontent.com/assets/6482127/13772689/d0ace164-ead8-11e5-8644-c344373a83e3.png">
+<img width="350" alt="Racoon Chart Library" src="https://cloud.githubusercontent.com/assets/6482127/13772689/d0ace164-ead8-11e5-8644-c344373a83e3.png">
 ## How to use  
 
 ### Step 1. Init graph view with frame. 
