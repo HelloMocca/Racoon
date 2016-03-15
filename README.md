@@ -27,6 +27,7 @@
 * wiki : [Stack Bar Chart](https://github.com/HelloMocca/Racoon/wiki/StackBar)
 
 ### Gauge Chart
+<img width="300" alt="Gauge Chart Usage" src="https://cloud.githubusercontent.com/assets/6482127/13772448/9bdfbc14-ead7-11e5-98dd-f1aef150f47c.png">
 * Input data type: Float
 * Value Range: 0 ~ 1.0
 * Animation : Supported
